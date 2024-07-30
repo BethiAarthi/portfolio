@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bethi Aarthi's Portfolio</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        * {
+            transition: all ease;
+            scroll-behavior: smooth;
+        }
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            padding-top: 56px; /* Space for fixed navbar */
+            scroll-behavior: smooth; 
+        }
+        .hero {
+            background: #333;
+            color: white;
+            padding: 60px 20px;
+            text-align: center;
+        }
+        .hero h1 {
+            font-size: 2.5rem;
+        }
+        .section {
+            padding: 40px 20px;
+        }
+        .certifications ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .certifications ul li {
+            margin-bottom: 10px;
+        }
+        .contact-form textarea {
+            resize: none;
+        }
+        footer {
+            background: #333;
+            color: white;
+            padding: 10px;
+            text-align: center;
+        }
+        /* Sticky Navbar */
+        .navbar {
+            position: fixed;
+            top: 0;
+            width: 100%;
+            z-index: 1000;
+        }
+        .navbar-nav {
+            margin-left: auto;
+        }
+        .section.bg-light {
+            background-color: #f8f9fa;
+        }
+    </style>
+</head>
+<body>
+
+    <header>
+        <!-- Bootstrap Navbar -->
+        <nav class="navbar navbar-expand-md navbar-dark bg-dark">
+            <a class="navbar-brand" href="#">Bethi Aarthi</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item"><a class="nav-link" href="#about">About Me</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#certifications">Certifications</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contact">Contact</a></li>
+                </ul>
+            </div>
+        </nav>
+    </header>
+
+    <div class="hero">
+        <h1>👋 Hi, I’m Bethi Aarthi</h1>
+        <p>👀 I’m passionate about Java programming, Python, and data science. I’m currently in my 4th year studying Data Science at Malla Reddy Engineering College.</p>
+    </div>
+
+    <section id="about" class="section">
+        <div class="container">
+            <h2>About Me</h2>
+            <p>🌱 I’m learning Java, Python, and HTML to build a strong foundation in software development and web technologies.</p>
+            <p>💻 As a dedicated learner, I’m eager to apply my skills to real-world projects and collaborate on innovative solutions.</p>
+            <p>📫 You can reach me via <a href="https://www.linkedin.com/in/aarthi-bethi-207a512b7" target="_blank">LinkedIn</a> or <a href="mailto:bethiaarthireddy@gmail.com">Email</a>.</p>
+            <p>😄 Pronouns: She/Her</p>
+            <p>⚡ Fun fact: I’m passionate about exploring new concepts in Java, diving into problem-solving, and applying these skills to create practical applications. I also enjoy participating in coding challenges.</p>
+        </div>
+    </section>
+
+    <section id="certifications" class="section bg-light">
+        <div class="container">
+            <h2>📜 Certifications</h2>
+            <div class="certifications">
+                <ul>
+                    <li>Secured a Social Entrepreneurship internship at Ekatva Foundation through Internshala. <a href="https://github.com/BethiAarthi/certificates/blob/main/certificate%20.pdf" target="_blank">Certificate</a></li>
+                    <li>Completed a Cloud Technologies internship. <a href="https://github.com/BethiAarthi/certificates/blob/main/cloud%20technologies%20certificate%20.pdf" target="_blank">Certificate</a></li>
+                    <li>Secured a Marketing internship at Muskurahat Foundation through Internshala. <a href="https://github.com/BethiAarthi/certificates/blob/main/muskurahat%20foundation%20.pdf" target="_blank">Certificate</a></li>
+                    <li>Python certification from Skilltimate. <a href="https://github.com/BethiAarthi/certificates/blob/main/python%20certificate%20.pdf" target="_blank">Certificate</a></li>
+                    <li>Python certification from HackerRank. <a href="https://www.hackerrank.com/certificates/d3ffabc7d2aa" target="_blank">Certificate</a></li>
+                </ul>
+            </div>
+        </div>
+    </section>
+
+    <section id="contact" class="section">
+        <div class="container">
+            <h2>📬 Contact</h2>
+            <form class="contact-form" id="contactForm">
+                <div class="form-group">
+                    <label for="name">Name:</label>
+                    <input type="text" class="form-control" id="name" name="name" required>
+                </div>
+                <div class="form-group">
+                    <label for="email">Email:</label>
+                    <input type="email" class="form-control" id="email" name="email" required>
+                </div>
+                <div class="form-group">
+                    <label for="message">Message:</label>
+                    <textarea class="form-control" id="message" name="message" rows="5" required></textarea>
+                </div>
+                <button type="button" class="btn btn-dark" onclick="sendEmail()">Send</button>
+            </form>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2024 Bethi Aarthi. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS and dependencies -->
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <script>
+        function sendEmail() {
+            var name = document.getElementById('name').value;
+            var email = document.getElementById('email').value;
+            var message = document.getElementById('message').value;
+
+            var mailtoLink = `mailto:bethiaarthireddy@gmail.com?subject=Contact%20from%20Portfolio&body=Name:%20${encodeURIComponent(name)}%0AEmail:%20${encodeURIComponent(email)}%0AMessage:%20${encodeURIComponent(message)}`;
+
+            window.location.href = mailtoLink;
+        }
+    </script>
+</body>
+</html>
