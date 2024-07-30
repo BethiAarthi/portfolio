@@ -7,6 +7,9 @@ A personal portfolio website for Bethi Aarthi, built using HTML and Bootstrap. I
 - **Bootstrap**: For responsive design and styling.
 - **Custom CSS**: Additional styling.
 
+## Live Demo
+You can view the live portfolio at [https://bethiaarthi.github.io/portfolio/](https://bethiaarthi.github.io/portfolio/).
+
 ## How to Use
 1. **Clone or Download** the repository.
 2. **Open** `index.html` in a web browser.
